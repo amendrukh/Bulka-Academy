@@ -1,0 +1,49 @@
+@use "sass:map";
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap');
+
+$colors: (
+        "background-purple": rgb(26,23,61),
+        "purple": rgb(81,51,166),
+        "orange": rgb(226,83,0),
+        "white": rgb(255,255,255),
+        "background-light-purple": rgb(133, 100, 187),
+        "background-light-orange":  rgb(245, 194, 146)
+);
+
+$background-purple-gradient: linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
+$background-orange-gradient:  radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: {
+    family: 'Ubuntu', sans-serif;;
+    size: 16px;
+    weight: 400;
+  };
+  width: 100%;
+  height: max-content;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: map-get($colors, "background-purple");
+  color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
