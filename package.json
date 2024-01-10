@@ -1,0 +1,21 @@
+{
+  "name": "html-css",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "compile:sass": "sass sass/styles.scss styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/amendrukh-bsa-hw/html-css.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://bitbucket.org/amendrukh-bsa-hw/html-css/issues"
+  },
+  "homepage": "https://bitbucket.org/amendrukh-bsa-hw/html-css#readme",
+  "devDependencies": {
+    "sass": "^1.69.7"
+  }
+}
