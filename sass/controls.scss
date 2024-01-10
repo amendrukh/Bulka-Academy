@@ -1,0 +1,26 @@
+@import "base";
+
+.btn {
+  font-family: 'Righteous', sans-serif;
+  font-size: 1rem;
+  min-width: 130px;
+  min-height: 41px;
+  padding: 10px 16px;
+  color: map-get($colors, "white");
+  background-color: map-get($colors, "orange");
+  box-sizing: border-box;
+  border: unset;
+  border-radius: 24px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: unset;
+    border: 1px map-get($colors, "orange") solid;
+    color: map-get($colors, "orange");
+
+    &::after {
+      content: "\2192";
+      padding-left: 5px;
+    }
+  }
+}

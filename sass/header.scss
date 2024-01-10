@@ -1,8 +1,10 @@
 @import "base";
+@import "hamburger";
+@import "controls";
 
 .header__container {
   width: 100%;
-  height: 100%;
+  min-height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,18 +18,92 @@
 
   &-item {
     width: 20%;
-    text-align: center;
+    text-align: end;
+
+    & > .menu__button-wrap {
+      display: block;
+    }
+
+    & > .menu__button-nav {
+      display: none;
+    }
 
     &-icon {
-      cursor: pointer;
+      min-height: 40px;
+      min-width: 40px;
     }
 
     &-title {
       width: 100%;
       color: map-get($colors, "orange");
       font-size: 1.5rem;
+      text-align: start;
     }
   }
+}
+
+@media all and (min-width: 768px) {
+
+  .header__container {
+    min-height: 66px;
+
+    &-item {
+
+      & > .menu__button-nav {
+        display: none;
+      }
+
+      &-icon {
+        min-height: 60px;
+        min-width: 60px;
+      }
+
+      &-title {
+        font-size: 2.25rem;
+      }
 
 
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .header__container-item:first-child {
+    width: 40%;
+  }
+
+  .header__container-item {
+    width: 55%;
+
+    & > .menu__button-wrap {
+      display: none;
+    }
+
+    & > .menu__button-nav {
+      font-family: 'Righteous', sans-serif;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+
+      .menu__button-nav-box {
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+        align-items: center;
+
+        &-item {
+          font-size: 1rem;
+          color: map-get($colors, "white");
+
+          &:hover {
+            text-decoration: underline;
+            text-decoration-color: map-get($colors, "orange");
+            text-underline-offset: 5px;
+            text-decoration-thickness: 4px;
+          }
+        }
+      }
+    }
+  }
 }
