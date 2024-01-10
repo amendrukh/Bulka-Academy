@@ -202,6 +202,9 @@ ul {
   }
 }
 @media all and (min-width: 992px) {
+  .header__container {
+    padding: 0 40px 0 40px;
+  }
   .header__container-item:first-child {
     width: 40%;
   }
