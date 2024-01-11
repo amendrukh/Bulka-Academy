@@ -3,10 +3,12 @@
 .intro__container {
   position: relative;
   display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   justify-content: center;
   box-sizing: border-box;
+  align-items: center;
 
   .intro__content {
     width: 100%;
@@ -68,7 +70,7 @@
 
 @media all and (min-width: 768px) {
   .intro__container {
-    align-items: center;
+    flex-direction: unset;
     gap: 20px;
 
     .intro__content {
@@ -117,7 +119,10 @@
       max-height: 197px;
       position: relative;
       top: unset;
+    }
 
+    .intro__sub-image {
+      display: none;
     }
   }
 }
