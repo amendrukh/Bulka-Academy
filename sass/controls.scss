@@ -4,19 +4,31 @@
   font-family: 'Righteous', sans-serif;
   font-size: 1rem;
   min-width: 130px;
-  min-height: 41px;
+  max-height: 40px;
   padding: 10px 16px;
-  color: map-get($colors, "white");
-  background-color: map-get($colors, "orange");
+  background-color: unset;
   box-sizing: border-box;
-  border: unset;
   border-radius: 24px;
   cursor: pointer;
+}
+
+.orange-btn {
+  color: map-get($colors, "white");
+  background-color: map-get($colors, "orange");
+  border: unset;
 
   &:hover {
-    background-color: unset;
-    border: 1px map-get($colors, "orange") solid;
-    color: map-get($colors, "orange");
+    background-color: map-get($colors, "light-orange");
+  }
+}
+
+.white-btn {
+  border: 1px map-get($colors, "orange") solid;
+  color: map-get($colors, "orange");
+
+  &:hover {
+    border-color: map-get($colors, "white");
+    color: map-get($colors, "white");
 
     &::after {
       content: "\2192";

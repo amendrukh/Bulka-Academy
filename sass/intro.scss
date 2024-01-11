@@ -1,0 +1,169 @@
+@import "base";
+
+.intro__container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+
+  .intro__content {
+    width: 100%;
+    min-height: 355px;
+    background: $background-purple-gradient;
+    border-radius: 25px;
+    padding: 88px 20px 20px 20px;
+
+    .intro__title {
+      font-family: "Righteous", sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    .intro__subtitle {
+      font-family: "Ubuntu", sans-serif;
+      font-size: 1rem;
+      text-align: start;
+      padding: 10px 0 20px 0;
+
+      .intro__subtitle-image {
+        display: none;
+      }
+
+      .intro__subtitle-text {
+
+      }
+    }
+
+    .intro__buttons {
+      display: grid;
+      gap: 10px;
+
+      .intro__button {
+        font-size: 1rem;
+        min-width: 260px;
+      }
+
+      .intro__button:last-child::before {
+        content: url("image/intro/frame-icon.svg");
+        vertical-align: middle;
+        padding-right: 8px;
+      }
+
+      .intro__button:last-child:hover::before {
+        content: " ";
+      }
+    }
+  }
+
+  .intro__image {
+    position: absolute;
+    top: -77px;
+    min-width: 150px;
+    max-height: 150px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .intro__container {
+    align-items: center;
+    gap: 20px;
+
+    .intro__content {
+      display: grid;
+      place-items: center;
+      padding: 30px;
+
+      .intro__title {
+        font-size: 2.25rem;
+        text-align: start;
+      }
+
+      .intro__subtitle {
+        width: 99%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 24px;
+        margin: auto;
+        align-items: center;
+        place-items: center;
+
+
+        .intro__subtitle-image {
+          display: inline-block;
+        }
+
+        .intro__subtitle-text {
+
+        }
+      }
+
+      .intro__buttons {
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        gap: 40px;
+
+        .intro__button {
+          min-width: 150px;
+          max-width: 150px;
+        }
+      }
+    }
+
+    .intro__image {
+      min-width: 274px;
+      max-height: 197px;
+      position: relative;
+      top: unset;
+
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .intro__container {
+    gap: 30px;
+
+    .intro__content {
+      padding: 50px;
+
+      .intro__title {
+        font-size: 4.3rem;
+
+      }
+
+      .intro__subtitle {
+        font-size: 1.13rem;
+
+
+        .intro__subtitle-image {
+          max-width: 80px;
+          min-height: 80px;
+        }
+
+        .intro__subtitle-text {
+
+        }
+      }
+
+      .intro__buttons {
+        gap: 69px;
+
+        .intro__button {
+          min-width: 200px;
+          max-width: 200px;
+          min-height: 60px;
+          font-size: 1.25rem;
+        }
+      }
+    }
+
+    .intro__image {
+      min-width: 513px;
+      max-height: 369px;
+
+    }
+  }
+}

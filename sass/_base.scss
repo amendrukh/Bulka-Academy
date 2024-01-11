@@ -5,7 +5,7 @@ $colors: (
         "background-purple": rgb(26,23,61),
         "purple": rgb(81,51,166),
         "orange": rgb(226,83,0),
-        "dark-orange": #E25300,
+        "light-orange": rgb(255,93,0),
         "white": rgb(255,255,255),
         "background-light-purple": rgb(133, 100, 187),
         "background-light-orange":  rgb(245, 194, 146)
@@ -34,6 +34,10 @@ body {
   box-sizing: border-box;
   background-color: map-get($colors, "background-purple");
   color: aliceblue;
+}
+
+main {
+  margin-top: 88px;
 }
 
 a {
