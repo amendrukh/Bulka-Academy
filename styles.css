@@ -5,6 +5,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap");
 * {
   -ms-overflow-style: none;
   box-sizing: border-box;
@@ -53,6 +54,17 @@ ul, ol, li {
 
 .container {
   margin-top: 88px;
+}
+
+.title {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1rem;
 }
 
 @media all and (min-width: 768px) {
@@ -108,6 +120,17 @@ ul, ol, li {
 
 .container {
   margin-top: 88px;
+}
+
+.title {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1rem;
 }
 
 @media all and (min-width: 768px) {
@@ -121,6 +144,9 @@ ul, ol, li {
 #menu__toggle:checked ~ .menu__button-box {
   visibility: visible;
   left: 0;
+}
+#menu__toggle:checked ~ body {
+  opacity: 50%;
 }
 
 .menu__button-wrap {
@@ -142,6 +168,7 @@ ul, ol, li {
   background-color: rgb(81, 51, 166);
   box-shadow: 1px 0 6px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
+  z-index: 10;
 }
 .menu__button-box-item {
   display: block;
@@ -212,6 +239,17 @@ ul, ol, li {
 
 .container {
   margin-top: 88px;
+}
+
+.title {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1rem;
 }
 
 @media all and (min-width: 768px) {
@@ -387,6 +425,17 @@ ul, ol, li {
 
 .container {
   margin-top: 88px;
+}
+
+.title {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1rem;
 }
 
 @media all and (min-width: 768px) {
@@ -575,6 +624,17 @@ ul, ol, li {
   margin-top: 88px;
 }
 
+.title {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1rem;
+}
+
 @media all and (min-width: 768px) {
   .container {
     margin-top: 40px;
@@ -628,6 +688,17 @@ ul, ol, li {
 
 .container {
   margin-top: 88px;
+}
+
+.title {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1rem;
 }
 
 @media all and (min-width: 768px) {
@@ -851,6 +922,164 @@ ul, ol, li {
   }
   .info__container .info__comments .comment {
     padding: 0 0 0 10%;
+  }
+}
+* {
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  height: max-content;
+  padding: 40px;
+  box-sizing: border-box;
+  background-color: rgb(26, 23, 61);
+  color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol, li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.container {
+  margin-top: 88px;
+}
+
+.title {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1rem;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    margin-top: 40px;
+  }
+}
+.opportunities__container .opportunities-list .opportunity {
+  display: grid;
+  grid-template-rows: 100px 50px 100px;
+  position: relative;
+  place-items: center;
+  min-height: 290px;
+  padding: 0 20px;
+  margin-top: 135px;
+  cursor: pointer;
+}
+.opportunities__container .opportunities-list .opportunity:hover .background {
+  background: radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
+}
+.opportunities__container .opportunities-list .opportunity:hover {
+  color: rgb(81, 51, 166);
+}
+.opportunities__container .opportunities-list .opportunity .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
+  border-radius: 24px;
+  transform: skew(0deg, 5deg);
+  z-index: -1;
+}
+.opportunities__container .opportunities-list .opportunity .opportunity__image {
+  position: absolute;
+  bottom: 170px;
+}
+.opportunities__container .opportunities-list .opportunity .opportunity__title {
+  font-family: "Righteous", sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+}
+@media all and (min-width: 768px) {
+  .opportunities__container .opportunities__title {
+    font-size: 2.25rem;
+  }
+  .opportunities__container .opportunities__subtitle {
+    width: 88%;
+    font-size: 1.13rem;
+  }
+  .opportunities__container .opportunities-list {
+    width: 80%;
+    margin: auto;
+  }
+  .opportunities__container .opportunities-list .opportunity {
+    min-height: 240px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50px 1fr;
+    padding: 40px 20px;
+    margin-top: 80px;
+  }
+  .opportunities__container .opportunities-list .opportunity .opportunity__background {
+    grid-area: 1/2/3/4;
+  }
+  .opportunities__container .opportunities-list .opportunity .opportunity__image {
+    min-width: 320px;
+    min-height: 320px;
+    top: -50px;
+    right: -105px;
+  }
+  .opportunities__container .opportunities-list .opportunity .opportunity__title {
+    font-size: 2.13rem;
+  }
+  .opportunities__container .opportunities-list .opportunity .opportunity__desc {
+    font-size: 1.13rem;
+  }
+}
+@media all and (min-width: 992px) {
+  .opportunities__container .opportunities-list {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  .opportunities__container .opportunities-list .opportunity {
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 50px 100px;
+    margin-top: 135px;
+    gap: 10px;
+  }
+  .opportunities__container .opportunities-list .opportunity .opportunity__background {
+    grid-area: unset;
+  }
+  .opportunities__container .opportunities-list .opportunity .opportunity__image {
+    right: unset;
+    top: -170px;
   }
 }
 
