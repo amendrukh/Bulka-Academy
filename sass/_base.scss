@@ -14,17 +14,34 @@ $colors: (
 $background-purple-gradient: linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
 $background-orange-gradient:  radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
 
-
-
 * {
+  -ms-overflow-style: none;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+*::-webkit-scrollbar {
+  width: 0;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: transparent;
+  border: none;
+}
+
+
+*:focus {
+  outline: none;
+}
+
 body {
   font: {
-    family: 'Ubuntu', sans-serif;;
+    family: "Ubuntu", sans-serif;;
     size: 16px;
     weight: 400;
   };
@@ -36,19 +53,26 @@ body {
   color: aliceblue;
 }
 
-main {
-  margin-top: 88px;
-}
-
 a {
   text-decoration: none;
 }
 
-ul {
+ul, ol, li {
+  margin: 0;
+  padding: 0;
   list-style-type: none;
 }
 
+.container {
+  margin-top: 88px;
+}
 
+@media all and (min-width: 768px) {
+  .container {
+    margin-top: 40px;
+  }
+
+}
 
 
 

@@ -1,1 +1,175 @@
 @import "base";
+@import "carousel";
+
+.info__container {
+  height: 100%;
+  position: relative;
+  background: $background-purple-gradient;
+  border-radius: 24px;
+  padding: 30px 20px;
+  margin: unset;
+
+  .info__statistics {
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+    border-bottom: 5px map-get($colors, "white") solid;
+    letter-spacing: 2px;
+
+    .stat__item {
+      display: grid;
+      grid-template-columns: 50px 100px 1fr;
+      align-items: center;
+      gap: 20px;
+
+      &-icon {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+      }
+
+      .students {
+        background: url("image/info/students-icon.svg") no-repeat center;
+      }
+
+      .lessons {
+        background: url("image/info/lessons-icon.svg") no-repeat center;
+      }
+
+      .likes {
+        background: url("image/info/likes-icon.svg") no-repeat center;
+      }
+
+      &-title {
+        font-size: 1.25rem;
+        text-align: start;
+      }
+
+      &-value {
+        display: flex;
+        justify-content: end;
+        font-family: "Righteous", sans-serif;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .info__comments {
+
+    .comment {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      padding: 0 5px;
+      gap: 10px;
+
+      &__photo {
+        max-width: 50px;
+        min-height: 50px;
+      }
+
+      &__info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
+
+        &-title {
+          font-family: "Righteous", sans-serif;
+          font-size: 1.25rem;
+          letter-spacing: 3px;
+          padding-bottom: 10px;
+        }
+
+        &-desc {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .info__container {
+    margin-top: 40px;
+    padding: 30px;
+
+    .info__statistics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-bottom: 30px;
+      margin-bottom: 15px;
+
+      .stat__item {
+        grid-template-columns: unset;
+        place-items: center;
+        gap: 10px;
+
+        &-icon {
+          grid-row: 2;
+        }
+
+        &-title {
+          font-size: 1.5rem;
+        }
+
+        &-value {
+          display: inline-block;
+          font-size: 2.13rem;
+        }
+      }
+    }
+  }
+
+  .info__container {
+    .info__comments {
+      padding: 0 10px 0 10px;
+
+      .comment {
+        gap: 20px;
+
+        &__photo {
+          max-width: 100px;
+          min-height: 100px;
+        }
+
+        &__info {
+          height: 100%;
+
+          &-title {
+            font-size: 1.5rem;
+          }
+
+          &-desc {
+            font-size: 1.12rem;
+          }
+        }
+      }
+    }
+
+  }
+
+
+}
+
+@media all and (min-width: 992px) {
+  .info__container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+
+    .info__statistics {
+      border-right: 5px map-get($colors, "white") solid;
+      border-bottom: unset;
+      margin: unset;
+      padding: unset;
+    }
+  }
+
+  .info__container {
+    .info__comments {
+      padding: unset;
+
+      .comment {
+        padding: 0 0 0 10%;
+      }
+    }
+  }
+}

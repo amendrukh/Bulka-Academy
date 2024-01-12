@@ -1,0 +1,98 @@
+@import "base";
+
+.carousel__viewport {
+  border: unset;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  counter-reset: item;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  .carousel__slide {
+    position: relative;
+    flex: 0 0 100%;
+    width: 100%;
+    counter-increment: item;
+
+    .carousel__snapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      scroll-snap-align: center;
+    }
+  }
+}
+
+.carousel__navigation {
+  width: 100%;
+  text-align: center;
+
+  &-list {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+  }
+
+  &-item {
+    display: grid;
+    cursor: pointer;
+  }
+
+  &-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: map-get($colors, "white");
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+  }
+
+}
+
+@media all and (min-width: 768px) {
+  .carousel__navigation {
+    &-list {
+      width: 25%;
+    }
+  }
+}
+
+@media (hover: hover) {
+  .carousel__snapper {
+    animation: toNext 4s ease infinite, snap;
+  }
+
+  .carousel__slide:last-child .carousel__snapper {
+    animation: toStart, snap;
+  }
+}
+
+@keyframes toNext {
+  75% {
+    left: 0;
+  }
+  95%, 98% {
+    left: 100%;
+  }
+  99% {
+    left: 0;
+  }
+}
+
+@keyframes toStart {
+  75% {
+    left: 0;
+  }
+  95%, 98% {
+    left: -300%;
+  }
+  99% {
+    left: 0;
+  }
+}
