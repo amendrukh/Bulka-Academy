@@ -9,14 +9,14 @@
   justify-content: space-between;
   align-items: center;
 
-  &-item:first-child {
+  .header__item:first-child {
     width: 70%;
     display: flex;
     gap: 10px;
     align-items: center;
   }
 
-  &-item {
+  .header__item {
     width: 20%;
     text-align: end;
 
@@ -47,7 +47,7 @@
   .header__container {
     min-height: 66px;
 
-    &-item {
+    .header__item {
 
       & > .menu__button-nav {
         display: none;
@@ -61,8 +61,6 @@
       &-title {
         font-size: 2.25rem;
       }
-
-
     }
   }
 }
@@ -71,7 +69,7 @@
   .header__container {
     padding: 0 40px 0 40px;
 
-    &-item:first-child {
+    .header__item:first-child {
       width: 40%;
     }
 
@@ -110,5 +108,4 @@
       }
     }
   }
-
 }

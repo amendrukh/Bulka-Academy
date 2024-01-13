@@ -358,27 +358,27 @@ input {
   justify-content: space-between;
   align-items: center;
 }
-.header__container-item:first-child {
+.header__container .header__item:first-child {
   width: 70%;
   display: flex;
   gap: 10px;
   align-items: center;
 }
-.header__container-item {
+.header__container .header__item {
   width: 20%;
   text-align: end;
 }
-.header__container-item > .menu__button-wrap {
+.header__container .header__item > .menu__button-wrap {
   display: block;
 }
-.header__container-item > .menu__button-nav {
+.header__container .header__item > .menu__button-nav {
   display: none;
 }
-.header__container-item-icon {
+.header__container .header__item-icon {
   min-height: 40px;
   min-width: 40px;
 }
-.header__container-item-title {
+.header__container .header__item-title {
   width: 100%;
   color: rgb(226, 83, 0);
   font-size: 1.5rem;
@@ -389,14 +389,14 @@ input {
   .header__container {
     min-height: 66px;
   }
-  .header__container-item > .menu__button-nav {
+  .header__container .header__item > .menu__button-nav {
     display: none;
   }
-  .header__container-item-icon {
+  .header__container .header__item-icon {
     min-height: 60px;
     min-width: 60px;
   }
-  .header__container-item-title {
+  .header__container .header__item-title {
     font-size: 2.25rem;
   }
 }
@@ -404,7 +404,7 @@ input {
   .header__container {
     padding: 0 40px 0 40px;
   }
-  .header__container-item:first-child {
+  .header__container .header__item:first-child {
     width: 40%;
   }
   .header__container-item {
@@ -917,7 +917,6 @@ input {
 .info__container .info__statistics {
   padding-bottom: 20px;
   margin-bottom: 25px;
-  border-bottom: 5px rgb(255, 255, 255) solid;
   letter-spacing: 2px;
 }
 .info__container .info__statistics .stat__item {
@@ -975,6 +974,14 @@ input {
 .info__container .info__comments .comment__info-desc {
   font-size: 1rem;
 }
+.info__container .info__line {
+  position: absolute;
+  width: calc(100% - 40px);
+  height: 6px;
+  top: 48.5%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 24px;
+}
 
 @media all and (min-width: 768px) {
   .info__container {
@@ -1021,6 +1028,9 @@ input {
   .info__container .info__comments .comment__info-desc {
     font-size: 1.12rem;
   }
+  .info__container .info__line {
+    width: calc(100% - 60px);
+  }
 }
 @media all and (min-width: 992px) {
   .info__container {
@@ -1038,6 +1048,13 @@ input {
   }
   .info__container .info__comments .comment {
     padding: 0 0 0 10%;
+  }
+  .info__container .info__line {
+    position: absolute;
+    width: 6px;
+    height: 80%;
+    right: 50%;
+    top: 10%;
   }
 }
 * {
