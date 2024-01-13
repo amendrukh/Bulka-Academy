@@ -352,11 +352,15 @@ input {
 }
 
 .header__container {
-  width: 100%;
+  top: 0;
+  position: fixed;
+  width: calc(100% - 80px);
   min-height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: rgb(26, 23, 61);
+  z-index: 1000;
 }
 .header__container .header__item:first-child {
   width: 70%;
