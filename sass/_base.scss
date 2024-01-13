@@ -2,17 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Ubuntu&display=swap');
 
 $colors: (
-        "background-purple": rgb(26,23,61),
-        "purple": rgb(81,51,166),
-        "orange": rgb(226,83,0),
-        "light-orange": rgb(255,93,0),
-        "white": rgb(255,255,255),
+        "background-purple": rgb(26, 23, 61),
+        "purple": rgb(81, 51, 166),
+        "orange": rgb(226, 83, 0),
+        "light-orange": rgb(255, 93, 0),
+        "white": rgb(255, 255, 255),
+        "lilac": rgba(81, 51, 166, 0.55),
         "background-light-purple": rgb(133, 100, 187),
-        "background-light-orange":  rgb(245, 194, 146)
+        "background-light-orange": rgb(245, 194, 146)
 );
 
 $background-purple-gradient: linear-gradient(rgb(133, 100, 187) 0%, rgb(102, 44, 197) 85%);
-$background-orange-gradient:  radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
+$background-orange-gradient: radial-gradient(rgb(245, 194, 146) 25%, rgb(241, 150, 65) 85%);
 
 * {
   -ms-overflow-style: none;
@@ -63,6 +64,15 @@ ul, ol, li {
   list-style-type: none;
 }
 
+input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
 .container {
   margin-top: 88px;
 }
@@ -90,6 +100,9 @@ ul, ol, li {
     margin-top: 100px;
   }
 
+  .title {
+    font-size: 3rem;
+  }
 }
 
 
