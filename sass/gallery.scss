@@ -1,0 +1,133 @@
+@import "base";
+
+.gallery__container {
+  .gallery__title {
+    text-align: end;
+  }
+
+  .gallery__subtitle {
+    text-align: end;
+    padding-bottom: 30px;
+  }
+
+  .photo__gallery {
+    position: relative;
+    display: grid;
+    gap: 20px;
+
+    .photo__item {
+      position: relative;
+      background: $background-purple-gradient;
+      border-radius: 20px;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: 0;
+      margin: 0;
+
+      .photo__item-img {
+        width: 100%;
+        height: 100%;
+        object-fit: none;
+      }
+    }
+
+    .photo__item:nth-child(2)::before,
+    .photo__item:last-child::before {
+      top: 20%;
+      width: 100%;
+      height: 60%;
+      position: absolute;
+      display: flex;
+      font-family: "Righteous", sans-serif;
+      font-size: 2.13rem;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .photo__item:nth-child(2)::before {
+      content: "No pain, no gain";
+      background: url("../image/gallery/hungry-cat-icon.svg") no-repeat center bottom;
+    }
+
+    .photo__item:last-child::before {
+      content: "Lazy office days";
+      background: url("../image/gallery/lazy-cat-icon.svg") no-repeat center bottom;
+    }
+
+    .photo__item:nth-child(2) .photo__item-img,
+    .photo__item:last-child .photo__item-img {
+      opacity: 0;
+    }
+
+    .photo__item:nth-child(2):hover,
+    .photo__item:last-child:hover {
+
+      &::before {
+        background: unset;
+        content: unset;
+      }
+
+      & .photo__item-img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .gallery__container {
+    .gallery__title {
+    font-size: 3rem;
+    }
+
+    .gallery__subtitle {
+      font-size: 1.3rem;
+      padding-bottom: 60px;
+    }
+
+    .photo__gallery {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      gap: 10px 20px;
+
+      .photo__item {
+
+        .photo__item-img {
+          height: 103%;
+          object-fit: cover;
+        }
+      }
+
+      .photo__item:nth-child(2) {
+        order: -1;
+      }
+
+      .photo__item:nth-child(3) {
+        display: grid;
+        grid-area: 1/2/3;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 992px) {
+  .gallery__container {
+    .gallery__subtitle {
+      padding-bottom: 70px;
+    }
+
+    .photo__gallery {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+
+      .photo__item:nth-child(2) {
+        order: 3;
+      }
+
+      .photo__item:nth-child(4) {
+        order: 4;
+      }
+    }
+  }
+}

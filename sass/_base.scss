@@ -80,7 +80,14 @@ ul, ol, li {
 
 @media all and (min-width: 768px) {
   .container {
-    margin-top: 40px;
+    margin-top: 60px;
+  }
+
+}
+
+@media all and (min-width: 992px) {
+  .container {
+    margin-top: 100px;
   }
 
 }
