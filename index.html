@@ -5,6 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
@@ -58,7 +59,6 @@
         <img class="intro__sub-image" src="image/info/cat-icon.svg" alt="cat is lying">
     </section>
     <section class="info__container container">
-        <span class="info__line"></span>
         <div class="info__statistics">
             <div class="stat__item">
                 <span class="stat__item-icon students"></span>
@@ -75,52 +75,37 @@
                 <h3 class="stat__item-title">Likes</h3>
                 <p class="stat__item-value">99k+</p>
             </div>
-
+            <span class="info__line"></span>
         </div>
         <div class="info__comments">
-            <ol class="carousel__viewport">
-                <li id="carousel__slide1" tabindex="0" class="comment carousel__slide">
-                    <img class="comment__photo" src="image/info/avatar-john-doe.png" alt="avatar John Doe">
-                    <div class="comment__info">
-                        <h3 class="comment__info-title">John Doe</h3>
-                        <p class="comment__info-desc">It was really cool experience, I love Bulka so much!</p>
+            <div class="swiper" init="false">
+                <div class="swiper-wrapper">
+                    <div id="carousel__slide1" tabindex="0" class="comment swiper-slide">
+                        <img class="comment__photo" src="image/info/avatar-john-doe.png" alt="avatar John Doe">
+                        <div class="comment__info">
+                            <h3 class="comment__info-title">John Doe</h3>
+                            <p class="comment__info-desc">It was really cool experience, I love Bulka so much!</p>
+                        </div>
                     </div>
-                    <div class="carousel__snapper"></div>
-                </li>
-                <li id="carousel__slide2" tabindex="0" class="comment carousel__slide">
-                    <img class="comment__photo" src="image/info/avatar-sarah-smith.png" alt="avatar Sarah Smith">
-                    <div class="comment__info">
-                        <h3 class="comment__info-title">Sarah Smith</h3>
-                        <p class="comment__info-desc">I’ve really enjoyed the lessons and the videos are so fun! I’ll
-                            recommend it to my friends!</p>
+                    <div id="carousel__slide2" tabindex="0" class="comment swiper-slide">
+                        <img class="comment__photo" src="image/info/avatar-sarah-smith.png" alt="avatar Sarah Smith">
+                        <div class="comment__info">
+                            <h3 class="comment__info-title">Sarah Smith</h3>
+                            <p class="comment__info-desc">I’ve really enjoyed the lessons and the videos are so fun!</p>
+                        </div>
                     </div>
-                    <div class="carousel__snapper"></div>
-                </li>
-                </li>
-                <li id="carousel__slide3"
-                    tabindex="0" class="comment carousel__slide">
-                    <img class="comment__photo" src="image/info/avatar-sam-kollins.png" alt="avatar Sam Kollins">
-                    <div class="comment__info">
-                        <h3 class="comment__info-title">Sam Kollins</h3>
-                        <p class="comment__info-desc">Every day I’m trying to find some time and watch few lessons. It’s
-                            hilarious! </p>
+                    <div id="carousel__slide3" tabindex="0" class="comment swiper-slide">
+                        <img class="comment__photo" src="image/info/avatar-sam-kollins.png" alt="avatar Sam Kollins">
+                        <div class="comment__info">
+                            <h3 class="comment__info-title">Sam Kollins</h3>
+                            <p class="comment__info-desc">Every day I’m trying to find some time and watch few lessons.
+                                It’s
+                                hilarious! </p>
+                        </div>
                     </div>
-                    <div class="carousel__snapper"></div>
-                </li>
-            </ol>
-            <aside class="carousel__navigation">
-                <ol class="carousel__navigation-list">
-                    <li class="carousel__navigation-item">
-                        <p class="carousel__navigation-button">slide 1</p>
-                    </li>
-                    <li class="carousel__navigation-item">
-                        <p class="carousel__navigation-button">slide 2</p>
-                    </li>
-                    <li class="carousel__navigation-item">
-                        <p class="carousel__navigation-button">slide 3</p>
-                    </li>
-                </ol>
-            </aside>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </section>
     <section class="opportunities__container container">
@@ -180,13 +165,14 @@
     </section>
     <section class="subscribe__container container border">
         <h2 class="subscribe__title title">You are in great paws!</h2>
-        <p class="subscribe__subtitle subtitle">Subscribe to get more information about upcoming courses and new videos. </p>
+        <p class="subscribe__subtitle subtitle">Subscribe to get more information about upcoming courses and new
+            videos. </p>
         <form class="subscribe__form">
-            <label class="subtitle__label" for="email" >
+            <label class="subtitle__label" for="email">
                 <input id="email" class="subscribe__email" type="email" placeholder="Your email address">
                 <button class="subscribe__button btn orange-btn">Subscribe</button>
             </label>
-                <button class="subscribe__button btn orange-btn">Subscribe</button>
+            <button class="subscribe__button btn orange-btn">Subscribe</button>
         </form>
         <img class="subscribe__image" src="image/subscribe/cat-notebook-icon.svg" alt="cat with notebook">
         <span class="subscribe__line"></span>
@@ -233,5 +219,7 @@
         </li>
     </ul>
 </footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script type="module" src="index.js"></script>
 </body>
 </html>

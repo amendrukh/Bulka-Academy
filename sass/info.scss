@@ -1,17 +1,17 @@
 @import "base";
-@import "carousel";
 
 .info__container {
   height: 100%;
   position: relative;
   background: $background-purple-gradient;
   border-radius: 24px;
-  padding: 30px 20px;
+  padding: 30px 20px 0 20px;
   margin: unset;
 
   .info__statistics {
+    position: relative;
     padding-bottom: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     letter-spacing: 2px;
 
     .stat__item {
@@ -83,13 +83,37 @@
         }
       }
     }
+    .swiper {
+      height: 100%;
+      width: 100%;
+    }
+
+    .swiper-wrapper {
+    }
+
+    .swiper-pagination {
+      min-height: 70px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      & span {
+        min-width: 10px;
+        min-height: 10px;
+      }
+    }
+
+    .swiper-pagination-bullet-active {
+      background-color: map-get($colors, 'orange');
+    }
   }
 
   .info__line {
     position: absolute;
-    width: calc(100% - 40px);
+    width: 100%;
     height: 6px;
-    top: 48.5%;
+    bottom: 0;
     background-color: map-get($colors, "white");
     border-radius: 24px;
   }
@@ -98,7 +122,7 @@
 @media all and (min-width: 768px) {
   .info__container {
     margin-top: 40px;
-    padding: 30px;
+    padding: 30px 30px 0 30px;
 
     .info__statistics {
       display: grid;
@@ -151,21 +175,23 @@
           }
         }
       }
-    }
 
-    .info__line {
-      width: calc(100% - 60px);
+      .swiper-pagination {
+        min-height: 65px;
+        & span {
+          min-width: 15px;
+          min-height: 15px;
+        }
+      }
     }
   }
 }
-
 @media all and (min-width: 992px) {
   .info__container {
     display: grid;
     grid-template-columns: repeat(2, 50%);
 
     .info__statistics {
-      border-right: 5px map-get($colors, "white") solid;
       border-bottom: unset;
       margin: unset;
       padding: unset;
@@ -173,19 +199,26 @@
   }
 
   .info__container {
+    padding: 30px;
     .info__comments {
       padding: unset;
 
       .comment {
-        padding: 0 0 0 10%;
+        padding: 0 0 30px 10%;
       }
+
+      .swiper-pagination {
+        position: absolute;
+        min-height: unset;
+      }
+
     }
 
     .info__line {
       position: absolute;
       width: 6px;
       height: 80%;
-      right: 50%;
+      left: 100%;
       top: 10%;
     }
   }
